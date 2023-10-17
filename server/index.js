@@ -6,7 +6,7 @@ const app = express()
 app.use(logger('dev'))
 app.get('/', (req,res) => {
 
-    res.send('<h1> Esto es un cha... ponele</h1>')
+    res.sendFile(process.cwd() + '/client/index.html')
 })
 
 app.listen(port, () => {
