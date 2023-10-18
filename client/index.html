@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat Vago</title>
+    <script type="module">
+        import { io } from 'https://cdn.socket.io/4.3.2/socket.io.esm.min.js'
+        const socket = io()
+    </script>
     <style>
         *,
         * ::before,
         * ::after {
-            box-sizing: border-box;            
+            box-sizing: border-box;
         }
 
         body {
@@ -22,7 +27,7 @@
 
         }
 
-        #chat{
+        #chat {
             border: 1px solid #ccc;
             border-radius: 4px;
             overflow: hidden;
@@ -30,9 +35,9 @@
             height: 100px;
             position: relative;
         }
-
     </style>
 </head>
+
 <body>
     <section id="chat">
         <form id="form">
@@ -41,4 +46,5 @@
         </form>
     </section>
 </body>
+
 </html>
